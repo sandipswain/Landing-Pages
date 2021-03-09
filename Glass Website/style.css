@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /* Takes the full space of the monitor */
+    min-height: 100vh;
+    /* to right top we go diagonally up */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    /* Vertically center aligned */
+    align-items: center;
+    /* Horizontally center aligned */
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.7),
+            rgb(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.2),
+            rgb(255, 255, 255, 0.5));
+
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 15%;
+}
+
+.user .avt {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.links .link h2 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.links .link i {
+    font-size: 18px;
+}
