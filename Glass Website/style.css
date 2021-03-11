@@ -4,7 +4,26 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2rem;
+    opacity: 0.8;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+p {
+    font-size: 10px;
+}
+
 main {
+
     /* Takes the full space of the monitor */
     min-height: 100vh;
     /* to right top we go diagonally up */
@@ -26,6 +45,7 @@ main {
     border-radius: 2rem;
     z-index: 2;
     backdrop-filter: blur(2rem);
+    display: flex;
 }
 
 .circle1,
@@ -51,6 +71,53 @@ main {
     left: 15%;
 }
 
+
+.dashboard {
+    /* It takes space all the available space from the left */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.2),
+            rgb(255, 255, 255, 0.5));
+    border-radius: 2rem;
+}
+
+.link {
+    display: flex;
+    margin: .8rem 0rem;
+    padding: 1rem 3rem;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 4rem;
+    color: rgb(99, 48, 182);
+    cursor: pointer;
+}
+
+.link h2 {
+    padding: 0 0.8rem;
+}
+
+.pro {
+    display: flex;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 2rem;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.pro h5 {
+    padding: 0rem .2rem;
+}
+
+.music {
+    /* Adding flex 1 here makes dashboard 50% and .games 50% */
+    /* flex: 1; */
+    flex: 1.5;
+}
+
 .user .avt {
     width: 5rem;
     height: 5rem;
@@ -60,11 +127,102 @@ main {
     background-repeat: no-repeat;
 }
 
-.links .link h2 {
-    font-weight: normal;
+
+
+.links .link {
     font-size: 18px;
 }
 
-.links .link i {
-    font-size: 18px;
+.cards .card-0 img {
+    width: 4rem;
+    object-fit: contain;
+}
+
+.cards .card-1 img {
+    width: 4rem;
+    object-fit: contain;
+}
+
+.cards .card-2 img {
+    width: 4rem;
+    object-fit: contain;
+
+}
+
+.cards .card-3 img {
+    width: 8rem;
+    height: 6rem;
+}
+
+.cards .card-4 img {
+    width: 8rem;
+}
+
+/* Music */
+.music .status {
+    margin-bottom: 2rem;
+    /* padding: 2rem; */
+}
+
+.music .status input {
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.7),
+            rgb(255, 255, 255, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+
+.music {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.cards {
+    margin-top: -2rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    border-radius: 1rem;
+    margin: 1rem 0rem;
+    padding: 2rem;
+    /* width: 90%; */
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    justify-content: space-between;
+}
+
+.progress {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(156, 170, 216);
+    position: absolute;
+    left: 60%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage {
+    font-weight: bold;
+    background: linear-gradient(to right top, #31b69e, #6cdbeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
